@@ -108,6 +108,50 @@ All of the above are toggled live from **`/panel > Moderation Settings`** - flip
 
 ---
 
+### 👋 Welcome Message
+
+Fully configurable per group - set up directly from `/panel → Moderation Settings → 👋 Welcome Message`.
+
+**Settings:**
+
+| Option | Description |
+|---|---|
+| 🟢/🔴 Enable/Disable | Toggle the custom welcome on or off. When disabled, a simple default message is shown and auto-deleted after 5 seconds |
+| 📝 Set Text | Set your custom welcome text. Reply to the bot's prompt with your message |
+| 🖼️ Set Media | Attach a photo, GIF, or video to your welcome message. Reply to the bot's prompt with the media |
+| 🔗 Custom Links | Add up to 5 clickable button links below the welcome message (e.g. Website, Twitter, Discord) |
+| ⏱️ Auto-delete | Set how long the custom welcome message stays before being deleted. Options: Never / 30s / 1 min / 5 min / 10 min / 30 min |
+| 👁️ Preview | Send a preview of your welcome message as it will appear to new members (auto-deletes after 5 seconds) |
+
+**Text placeholders:**
+
+| Placeholder | Output |
+|---|---|
+| `{name}` | Clickable mention of the new member |
+| `{username}` | @username, or first name if no username |
+| `{chat}` | The group name |
+
+**Inline links in text:**
+Use HTML syntax directly in your welcome text:
+```
+<a href="https://yoursite.com">Click here</a>
+```
+
+**Custom link buttons:**
+When adding links via 🔗 Custom Links, reply to the prompt using the format:
+```
+Label | https://yourlink.com
+```
+Example: `Website | https://nxfi.io`
+
+**How it works:**
+- If verification is **on** - the welcome message fires automatically after a user passes the math challenge
+- If verification is **off** - the welcome message fires immediately when a user joins
+- If the custom welcome is **disabled** - a plain default message is shown and auto-deletes after 5 seconds
+- The 👁️ Preview always auto-deletes after 5 seconds so it doesn't clutter the group
+
+---
+
 ### 📈 Buy Bot
 
 | Where | What |
